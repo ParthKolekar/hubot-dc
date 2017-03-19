@@ -1,0 +1,30 @@
+{
+  "name": "hubot-dc",
+  "version": "1.0.0",
+  "description": "A simple hubot adapter for the Direct Connect file shareing hubs.",
+  "main": "./src/dc.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ParthKolekar/hubot-dc.git"
+  },
+  "keywords": [
+    "hubot",
+    "dc",
+    "direct",
+    "connect"
+  ],
+  "author": "Parth Kolekar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ParthKolekar/hubot-dc/issues"
+  },
+  "homepage": "https://github.com/ParthKolekar/hubot-dc#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "coffee-script": ">=1.2.0"
+  }
+}
