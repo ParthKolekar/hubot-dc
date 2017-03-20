@@ -10,19 +10,23 @@ The IRC adapter requires only the following environment variables.
 
 * `HUBOT_DC_SERVER`
 * `HUBOT_DC_NICK`
+* `HUBOT_DC_DESCRIPTION`
 
 And the following are optional.
 
-* ``
+* `HUBOT_DC_SPOOF_SHARE`
 
 ### DC Server
 
 This is the full hostname or IP address of the DC server you want your hubot to connect to. Make a note of it.
 
-### IRC Nick
+### DC Nick
 
-This is the optional nick you want your hubot to join with. If omitted it will
-default to the name of your hubot.
+This is the nick you want your hubot to join with.
+
+## DC Description
+
+The description that will show up in for your bot.
 
 ## Contribute
 
