@@ -47,7 +47,7 @@ class DCBot extends Adapter
         cmd_str = data.toString 'ascii'
         cmd_reg = /\$([a-z]+) *([^|]*)/gi
         isCommand = false
-        while m = cmd_reg.exec cmd_str
+        while m = cmd_reg.exec(cmd_str)
           ifCommand = true
           command = m[1]
           arg = m[2]
@@ -55,10 +55,10 @@ class DCBot extends Adapter
           self.socket.emit command, arg
         if not isCommand
           msg_reg = /<(.+)> ([^|]*)/gi
-          while m = msg_reg.exec cmd_str
+          while m = msg_reg.exec(cmd_str)
             sender = m[1]
             message = m[2]
-            users = self.robot.brain.usersForFuzzyName sender
+            users = self.robot.brain.usersForFuzzyName(sender)
             logger.debug "[Received From " + sender + "] " + message
             self.socket.emit "message", sender, message
 
@@ -75,7 +75,7 @@ class DCBot extends Adapter
         self.emit "connected"
 
     self.socket.on "NickList", (nicks) ->
-      for name in nicks.split "$$"
+      for name in nicks.split("$$")
         newUser =
           id: name
           name: name
