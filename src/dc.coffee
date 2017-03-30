@@ -31,6 +31,7 @@ class DCBot extends Adapter
     for message in messages
       if message isnt ''
         self.socket.write "<" + self.nick + "> " + messages + "|", "binary"
+        sleep 500
 
   reply: (envelope, messages...) ->
      self = @
