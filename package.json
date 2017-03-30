@@ -1,6 +1,6 @@
 {
     "name": "hubot-dc",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A simple hubot adapter for the Direct Connect file shareing hubs.",
     "main": "./src/dc.coffee",
     "scripts": {

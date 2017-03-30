@@ -26,12 +26,16 @@ class DCBot extends Adapter
       else
         self.socket.write "$" + command + " " + arg + "|", "binary"
 
+  sleep = (ms) ->
+    start = new Date().getTime()
+    continue while new Date().getTime() - start < ms
+
   send: (envelope, messages...) ->
     self = @
     for message in messages
       if message isnt ''
         self.socket.write "<" + self.nick + "> " + messages + "|", "binary"
-        sleep 500
+        self.sleep 500
 
   reply: (envelope, messages...) ->
      self = @
