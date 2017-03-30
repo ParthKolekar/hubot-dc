@@ -26,7 +26,7 @@ class DCBot extends Adapter
       else
         self.socket.write "$" + command + " " + arg + "|", "binary"
 
-  sleep = (ms) ->
+  sleep: (ms) ->
     start = new Date().getTime()
     continue while new Date().getTime() - start < ms
 
